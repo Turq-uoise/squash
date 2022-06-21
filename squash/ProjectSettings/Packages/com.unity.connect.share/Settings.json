@@ -6,7 +6,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"E:/unity/squash/build/squash v0.2;E:/unity/squash/build;;;;;;;;\"}"
+                "value": "{\"m_Value\":\"E:/unity/squash-git/squash/squash/build/squash git;E:/unity/squash/build/squash v0.2;E:/unity/squash/build;;;;;;;\"}"
             },
             {
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
