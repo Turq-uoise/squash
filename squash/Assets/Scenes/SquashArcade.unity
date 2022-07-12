@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 481a4fd02354cf04fae5102db02efbfd, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -193,13 +193,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\"WASD\" to move (shift to sprint)\n\"H\"  to swing the racket (hold to
-    power up)\nSpace to jump (hold to jump higher)\n\"F\" to fire the ball in a random
-    direction\n\"R\" to reset the ball\n\"T\" to toggle dotted line\n\nSquash is
-    a game where you have to hit the ball against the back wall \nbefore it bounces
-    on the floor twice. If it bounces twice or hits the red,\n the ball will reset,
-    and you have to hit it to continue.\n\nAfter you reach a rally of 5, the ball
-    will slowly bounce faster and faster."
+  m_Text: " PAUSED\n\n\"WASD\" to move (shift to sprint)\n\"H\"  to swing the racket
+    (hold to power up)\nSpace to jump (hold to jump higher)\n\"F\" to fire the ball
+    in a random direction\n\"R\" to reset the ball\n\"T\" to toggle dotted line                 
+    \n\nSquash is a game where you have to hit the ball against the back wall \nbefore
+    it bounces on the floor twice. If it bounces twice or hits the red,\n the ball
+    will reset, and you have to hit it to continue.\n\nAfter you reach a rally of
+    5, the ball will slowly bounce faster and faster.\n\n PAUSED"
 --- !u!222 &47262815
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -951,7 +951,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '"L" to show/hide tutorial
+  m_Text: '"L" to pause/unpause
 
 '
 --- !u!222 &223974229
