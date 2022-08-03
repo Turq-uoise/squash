@@ -38,7 +38,7 @@ public class ShowText : MonoBehaviour
         {
             tutorial.SetActive(false);
             tint.SetActive(false);
-            Time.timeScale = 1;
+            Time.timeScale = 1.2f;
         }
     }
 }

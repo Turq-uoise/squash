@@ -1185,7 +1185,7 @@ AudioSource:
   m_GameObject: {fileID: 391681198}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3062390389618908434, guid: 5fa517402ca2b7a4ca16206b25c35041, type: 2}
   m_audioClip: {fileID: 8300000, guid: e564854252605814ea66ba67313b4371, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -3208,7 +3208,7 @@ AudioSource:
   m_GameObject: {fileID: 1573605460}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3062390389618908434, guid: 5fa517402ca2b7a4ca16206b25c35041, type: 2}
   m_audioClip: {fileID: 8300000, guid: 01dcd1b5e7b32574f9fd4f2a2b04e73d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -3304,7 +3304,7 @@ AudioSource:
   m_GameObject: {fileID: 1573605460}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3062390389618908434, guid: 5fa517402ca2b7a4ca16206b25c35041, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6f49d07c36a316f4fbe51cccaf6fc8a7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -4473,7 +4473,7 @@ AudioSource:
   m_GameObject: {fileID: 2011850748}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 796781765076280609, guid: 5fa517402ca2b7a4ca16206b25c35041, type: 2}
   m_audioClip: {fileID: 8300000, guid: 55598849625e6024b814cb49d06a8d2c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -5185,7 +5185,7 @@ AudioSource:
   m_GameObject: {fileID: 6419538132183269224}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3062390389618908434, guid: 5fa517402ca2b7a4ca16206b25c35041, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6f49d07c36a316f4fbe51cccaf6fc8a7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -5281,7 +5281,7 @@ AudioSource:
   m_GameObject: {fileID: 6419538132183269224}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3062390389618908434, guid: 5fa517402ca2b7a4ca16206b25c35041, type: 2}
   m_audioClip: {fileID: 8300000, guid: e564854252605814ea66ba67313b4371, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

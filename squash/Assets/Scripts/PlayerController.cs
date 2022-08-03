@@ -45,10 +45,11 @@ public class PlayerController : MonoBehaviour
         var z = Random.Range(10, 30);
         return new Vector3(x, y, z);
     }
-    
+
 
     void Start()
     {
+        Time.timeScale = 1.2f;
         rb = GetComponent<Rigidbody>();
         rbb = ball.GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
@@ -61,31 +62,31 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L)) { showTutorial = !showTutorial; }
 
-        if (Input.GetKey(KeyCode.LeftShift)) { speed = speedDefault * 2f; }
+        if (KeyBindingManager.GetKey(KeyAction.sprint)) { speed = speedDefault * 2f; }
 
         else { speed = speedDefault; }
 
-        if (Input.GetKey(KeyCode.D) && transform.position.x < 10.25)
+        if (KeyBindingManager.GetKey(KeyAction.right) && transform.position.x < 10.25)
         {
             transform.position += Time.deltaTime * speed * Vector3.right;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, -15), 0.05f);
         }
 
-        if (Input.GetKey(KeyCode.A) && transform.position.x > -10.25)
+        if (KeyBindingManager.GetKey(KeyAction.left) && transform.position.x > -10.25)
         {
             transform.position += Time.deltaTime * speed * Vector3.left;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 15), 0.05f);
 
         }
 
-        if (Input.GetKey(KeyCode.W) && transform.position.z < 30)
+        if (KeyBindingManager.GetKey(KeyAction.forward) && transform.position.z < 30)
         {
             transform.position += Time.deltaTime * speed * Vector3.forward;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(15, 0, 0), 0.05f);
 
         }
 
-        if (Input.GetKey(KeyCode.S) && transform.position.z > 5)
+        if (KeyBindingManager.GetKey(KeyAction.backward) && transform.position.z > 5)
         {
             transform.position += Time.deltaTime * speed * Vector3.back;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-15, 0, 0), 0.05f);
@@ -94,15 +95,15 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), 0.01f);
 
 
-        if(Input.GetKey(KeyCode.Space) && isJumping == false)
+        if (KeyBindingManager.GetKey(KeyAction.up) && isJumping == false)
         {
             jumpingPower = Mathf.Clamp(jumpingPower, 3, 6);
             jumpingPower += Time.deltaTime * 10f;
             jumpSphere.transform.localScale = new Vector3(jumpingPower / 12, jumpingPower / 12, jumpingPower / 12);
             transform.localScale = new Vector3(0.8304f, 1f, 0.8304f);
         }
-        
-        if (Input.GetKeyUp(KeyCode.Space) && isJumping == false)
+
+        if (KeyBindingManager.GetKeyUp(KeyAction.up) && isJumping == false)
         {
             isJumping = true;
             jumped = true;
@@ -113,7 +114,7 @@ public class PlayerController : MonoBehaviour
             Invoke("JumpReset", 0.72f);
         }
 
-        if (Input.GetKey(KeyCode.H) && hitAgain)
+        if (KeyBindingManager.GetKey(KeyAction.swing) && hitAgain)
         {
             racketPower = Mathf.Clamp(racketPower, 2, 6);
             racketPower += Time.deltaTime * 10f;
@@ -123,7 +124,7 @@ public class PlayerController : MonoBehaviour
             racket.transform.rotation = Quaternion.Slerp(racket.transform.rotation, rottGoal, 0.02f);
         }
 
-        if (Input.GetKeyUp(KeyCode.H) && hitAgain)
+        if (KeyBindingManager.GetKeyUp(KeyAction.swing) && hitAgain)
         {
             hit = true;
             hitAgain = false;
@@ -146,7 +147,7 @@ public class PlayerController : MonoBehaviour
             rally = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (KeyBindingManager.GetKeyDown(KeyAction.reset))
         {
             ball.transform.position = new Vector3(transform.position.x + 1, transform.position.y + 2, transform.position.z + 2);
             rbb.Sleep();
@@ -174,7 +175,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         if (jumped == true)
-        { 
+        {
             rb.AddForce(Vector3.up * 5 * jumpingPower, ForceMode.Impulse);
             jumped = false;
             jumpingPower = 0;

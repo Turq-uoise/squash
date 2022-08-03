@@ -59,5 +59,10 @@ public enum KeyAction
 	left,
 	right,
 	forward,
-	backward
+	backward,
+	swing,
+	reset,
+	pause,
+	linetoggle,
+	sprint
 }

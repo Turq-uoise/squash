@@ -15,7 +15,12 @@
       "ProjectGuid": "048e5d85-21f2-c22d-f0e7-6bd04e327d7b",
       "DisplayName": "UnityEngine.UI",
       "ColorIndex": 1
+    },
+    "c0d09dee-9af0-4c32-cec9-283ad4645572": {
+      "ProjectGuid": "c0d09dee-9af0-4c32-cec9-283ad4645572",
+      "DisplayName": "Unity.VisualStudio.Editor",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }
