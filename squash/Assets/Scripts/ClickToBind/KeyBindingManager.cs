@@ -55,7 +55,7 @@ public enum KeyAction
 {
 	none,
 	up,
-	down,
+	sprint,
 	left,
 	right,
 	forward,
@@ -63,6 +63,5 @@ public enum KeyAction
 	swing,
 	reset,
 	pause,
-	linetoggle,
-	sprint
+	linetoggle
 }

@@ -18,4 +18,5 @@ public class Speaker : MonoBehaviour
         rb.AddForce(0, -5, 0);
         Destroy(gameObject, 5);
     }
+
 }

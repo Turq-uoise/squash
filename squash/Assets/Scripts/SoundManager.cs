@@ -25,7 +25,17 @@ public class SoundManager : MonoBehaviour
         sfxSlider.onValueChanged.AddListener(SetSFXVolume);
         if (!PlayerPrefs.HasKey("musicVolume"))
         {
+            mixer.SetFloat(mixerMusic, Mathf.Log10(0.4f) * 20);
             PlayerPrefs.SetFloat("musicVolume", 0.4f);
+        }
+        else
+        {
+            Load();
+        }
+        if (!PlayerPrefs.HasKey("sfxVolume"))
+        {
+            mixer.SetFloat(mixerSFX, Mathf.Log10(0.4f) * 20);
+            PlayerPrefs.SetFloat("sfxVolume", 0.4f);
         }
         else
         {

@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.L)) { showTutorial = !showTutorial; }
+        if (KeyBindingManager.GetKeyDown(KeyAction.pause)) { showTutorial = !showTutorial; }
 
         if (KeyBindingManager.GetKey(KeyAction.sprint)) { speed = speedDefault * 2f; }
 
