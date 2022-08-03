@@ -16,54 +16,23 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-
+        musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
     }
 
     void Start()
     {
-        musicSlider.onValueChanged.AddListener(SetMusicVolume);
-        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
-        if (!PlayerPrefs.HasKey("musicVolume"))
-        {
-            mixer.SetFloat(mixerMusic, Mathf.Log10(0.4f) * 20);
-            PlayerPrefs.SetFloat("musicVolume", 0.4f);
-        }
-        else
-        {
-            Load();
-        }
-        if (!PlayerPrefs.HasKey("sfxVolume"))
-        {
-            mixer.SetFloat(mixerSFX, Mathf.Log10(0.4f) * 20);
-            PlayerPrefs.SetFloat("sfxVolume", 0.4f);
-        }
-        else
-        {
-            Load();
-        }
+        mixer.SetFloat(mixerMusic, Mathf.Log10(0.4f) * 20);
+        mixer.SetFloat(mixerSFX, Mathf.Log10(0.4f) * 20);
     }
 
     private void SetMusicVolume(float value)
     {
         mixer.SetFloat(mixerMusic, Mathf.Log10(value) * 20);
-        Save();
     }
 
     private void SetSFXVolume(float value)
     {
         mixer.SetFloat(mixerSFX, Mathf.Log10(value) * 20);
-        Save();
-    }
-
-    private void Load()
-    {
-        musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
-        sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
-    }
-
-    private void Save()
-    {
-        PlayerPrefs.SetFloat("musicVolume", musicSlider.value);
-        PlayerPrefs.SetFloat("sfxVolume", sfxSlider.value);
     }
 }
